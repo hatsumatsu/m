@@ -54,15 +54,17 @@ export default class MyModule extends M {
 
 ##### `onDestroy()`
 
-##### `onInit()`
-
 ### Methods
 
 ##### `this.addEvent( type, selector, handler, options )`
 Add delegated namespaced events that get automatically removed when the module s destroyed.
+
 `type` — `click`, `touchstart`, `module/action`
+
 `selector` — `.class`, `[data-role="element"]`, `window`, `null = document`
+
 `handler` — `function( event )`
+
 `options` — options passed to addEventListener like `{ capture: true }` 
 
 ##### `this.triggerEvent( type, data, element )`
