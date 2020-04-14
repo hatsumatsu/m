@@ -13,7 +13,7 @@
 
 `````
 
-Tiny ES6 module template for pregressive enhancement.
+Tiny ES6 module template for progressive enhancement.
 
 ### Installation
 

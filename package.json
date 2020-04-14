@@ -1,8 +1,8 @@
 {
-	"name": "@superstructure.net/e",
-	"version": "1.2.2",
-	"main": "e.js",
-	"description": "Tiny DOM manipulation helper with a familiar fluent API",
+	"name": "@superstructure.net/m",
+	"version": "1.0.0",
+	"main": "m.js",
+	"description": "Tiny ES6 module template for progressive enhancement",
   	"license": "MIT",
-  	"repository": "hatsumatsu/e"
+  	"repository": "hatsumatsu/m"
 }
