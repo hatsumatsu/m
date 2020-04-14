@@ -59,13 +59,13 @@ export default class MyModule extends M {
 ##### `this.addEvent( type, selector, handler, options )`
 Add delegated namespaced events that get automatically removed when the module s destroyed.
 
-`type` — `click`, `touchstart`, `module/action`
+`type`: like `click`, `touchstart`, `module/action`
 
-`selector` — `.class`, `[data-role="element"]`, `window`, `null = document`
+`selector`: like `.class`, `[data-role="element"]`, `window`, `null = document`
 
-`handler` — `function( event )`
+`handler`: like `this.onClick`
 
-`options` — options passed to addEventListener like `{ capture: true }` 
+`options`: [options](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener) passed to `addEventListener` like `{ capture: true }` 
 
 ##### `this.triggerEvent( type, data, element )`
 Trigger `type` event on `element` (defaults to `document`) passing an optional `data` object.
