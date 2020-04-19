@@ -55,6 +55,10 @@ export default class M {
           event.target.matches(selector) ||
           (!options.capture && event.target.closest(selector))
         ) {
+          if( !event.target.matches(selector) && event.target.closest ) {
+            event.actualTarget = event.target.closest(selector);
+          }
+
           handler.call(this, event);
         }
       }
