@@ -67,19 +67,22 @@ export default class M {
     _event['handler'] = () => {
       // if no selector or selector is root element,
       // directly call handler
-      // otherwise check for delegation
       if (!selector || selector === document || selector === window) {
         handler.call(this, event);
-      } else if (event.target === document) {
-        // ignoring events bubbled to the root...
-      } else {
-        if (
-          event.target.matches(selector) ||
-          (!options.capture && event.target.closest(selector))
+      // if selector is present and event is not bubbled up o the root
+      } else if (event.target !== document) {
+        
+        // target === selector
+        if (event.target.matches(selector)) {
+          handler.call(this, event);
+
+        // target is child of selector AND we are not in the capture phase
+        } else if (
+          event.target.closest &&
+          event.target.closest(selector) &&
+          !options.capture
         ) {
-          if( !event.target.matches(selector) && event.target.closest ) {
-            event.actualTarget = event.target.closest(selector);
-          }
+          event.actualTarget = event.target.closest(selector);
 
           handler.call(this, event);
         }
