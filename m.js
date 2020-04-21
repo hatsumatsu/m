@@ -15,6 +15,27 @@
 M
 
 Tiny ES6 module template for progressive enhancement.
+
+
+
+import M from '@superstructure.net/m';
+
+export default class MyModule extends M {
+  constructor() {
+    super({
+      namespace: 'myModule',
+      mediaQuery: '( min-width: 800px )'
+    });
+  }
+
+  onInit() {}
+
+  onResize( viewport, isUIResize ) {} 
+  
+  onDestroy() {}
+} 
+
+ *
  * 
  */
 
@@ -24,6 +45,7 @@ export default class M {
     this._mediaQuery = options.mediaQuery;
     this._events = [];
     this._resizeTimer = null;
+    this._viewport = {}
     this._initiated = false;
 
     this._bindEvents();
@@ -145,6 +167,18 @@ export default class M {
 
   _onResize() {
     this._checkMediaQuery();
+
+    this.viewport.prevWidth = this.viewport.width;
+    this.viewport.prevHeight = this.viewport.height;
+    this.viewport.width = window.innerWidth;
+    this.viewport.height = window.innerHeight;
+
+    if (this.onResize) {
+      this.onResize( 
+        this.viewport, 
+        ( this.viewport.width < 800 && this.viewport.width === this.viewport.prevWidth && Math.abs( this.viewport.height - this.viewport.prevHeight ) < 100 ) 
+        );
+    }    
   }
 
   _checkMediaQuery() {
