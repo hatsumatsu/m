@@ -52,6 +52,7 @@ export default class MyModule extends M {
 
 ##### `onResize( viewport, isUIResize )`
 `viewport`: `{ width: 0, height: 0, prevWidth: 0, prevHeight: 0 }`
+
 `isUIResize`: boolean indicating whether the resize was triggered by a visibility change of the Browser UI on mobile.
 
 ##### `onDestroy()`
@@ -59,7 +60,7 @@ export default class MyModule extends M {
 ### Methods
 
 ##### `this.addEvent( type, selector, handler, options )`
-Add delegated namespaced events that get automatically removed when the module s destroyed.
+Add delegated namespaced events that get automatically removed when the minstance is destroyed.
 
 `type`: like `click`, `touchstart`, `module/action`
 
@@ -78,7 +79,7 @@ Returns an attribute selector based on the modules namespace and the passed role
 `this.selector( 'content' )` returns `[data-{namespace}-role="content"]`
 
 ##### `destroy()`
-Manually destroy the module instance.
+Manually destroy the instance.
 
 
 
