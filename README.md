@@ -35,7 +35,7 @@ export default class MyModule extends M {
 
   onInit() {}
 
-  onResize() {}
+  onResize( viewport, isUIResize ) {}
 
   onDestroy() {}
 }
@@ -50,7 +50,9 @@ export default class MyModule extends M {
 
 ##### `onInit()`
 
-##### `onResize()`
+##### `onResize( viewport, isUIResize )`
+`viewport`: `{ width: 0, height: 0, prevWidth: 0, prevHeight: 0 }`
+`isUIResize`: boolean indicating whether the resize was triggered by a visibility change of the Browser UI on mobile.
 
 ##### `onDestroy()`
 
