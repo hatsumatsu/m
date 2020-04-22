@@ -43,7 +43,7 @@ export default class MyModule extends M {
 
 ### Features
 
-+ Automatically init / destroy modules depending on media queries.
++ Automatically init / destroy module instances based on media queries.
 + Add namespaced delegated events via `this.addEvent()` that get automatically removed when the module is destroyed.
 
 ### Lifecycle Functions
