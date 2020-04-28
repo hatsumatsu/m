@@ -171,8 +171,8 @@ export default class M {
   _onResize() {
     this._checkMediaQuery();
 
-    this.viewport.prevWidth = this.viewport.width;
-    this.viewport.prevHeight = this.viewport.height;
+    this.viewport.prevWidth = this.viewport.width || 0;
+    this.viewport.prevHeight = this.viewport.height || 0;
     this.viewport.width = window.innerWidth;
     this.viewport.height = window.innerHeight;
 
