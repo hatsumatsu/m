@@ -60,7 +60,7 @@ export default class MyModule extends M {
 ### Methods
 
 ##### `this.addEvent( type, selector, handler, options )`
-Add delegated namespaced events that get automatically removed when the minstance is destroyed.
+Add delegated namespaced events that get automatically removed when the instance is destroyed.
 
 `type`: like `click`, `touchstart`, `module/action`
 

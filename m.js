@@ -120,23 +120,23 @@ export default class M {
    * Internal functions
    */
   _init() {
-    if (this.onInit) {
-      this.onInit();
-    }
-
     this._initiated = true;
     document.documentElement.classList.add('initiated--' + this._namespace);
+
+    if (this.onInit) {
+      this.onInit();
+    }    
   }
 
   destroy() {
     this._removeEvents();
 
-    document.documentElement.classList.remove('initiated--' + this._namespace);
-    this._initiated = false;
-
     if (this.onDestroy) {
       this.onDestroy();
-    }
+    }    
+
+    document.documentElement.classList.remove('initiated--' + this._namespace);
+    this._initiated = false;
   }
 
   _bindEvents() {
