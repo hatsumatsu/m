@@ -177,15 +177,15 @@ export default class M {
   _onResize() {
     this._checkMediaQuery();
 
-    this.viewport.prevWidth = this.viewport.width || 0;
-    this.viewport.prevHeight = this.viewport.height || 0;
-    this.viewport.width = window.innerWidth;
-    this.viewport.height = window.innerHeight;
+    this._viewport.prevWidth = this._viewport.width || 0;
+    this._viewport.prevHeight = this._viewport.height || 0;
+    this._viewport.width = window.innerWidth;
+    this._viewport.height = window.innerHeight;
 
     if (this.onResize) {
       this.onResize( 
-        this.viewport, 
-        ( this.viewport.width < 800 && this.viewport.width === this.viewport.prevWidth && Math.abs( this.viewport.height - this.viewport.prevHeight ) < 100 ) 
+        this._viewport, 
+        ( this._viewport.width < 800 && this._viewport.width === this._viewport.prevWidth && Math.abs( this._viewport.height - this._viewport.prevHeight ) < 100 ) 
         );
     }    
   }
