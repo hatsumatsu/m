@@ -45,7 +45,13 @@ export default class M {
     this._mediaQuery = options.mediaQuery;
     this._events = [];
     this._resizeTimer = null;
-    this._viewport = {}
+    this._viewport = {
+      prevWidth: 0,
+      prevHeight: 0,
+      width: 0,
+      height: 0
+    }
+
     this._initiated = false;
 
     this._bindEvents();

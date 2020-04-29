@@ -1,6 +1,6 @@
 {
 	"name": "@superstructure.net/m",
-	"version": "1.0.4",
+	"version": "1.0.5",
 	"main": "m.js",
 	"description": "Tiny ES6 module template for progressive enhancement",
   	"license": "MIT",
