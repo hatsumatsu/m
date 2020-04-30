@@ -41,10 +41,8 @@ export default class MyModule extends M {
 }
 `````
 
-### Features
 
-+ Automatically init / destroy module instances based on media queries.
-+ Add namespaced delegated events via `this.addEvent()` that get automatically removed when the module is destroyed.
+Classes extended from M are automatically initiated and destroyed based on the provided media queries.
 
 ### Lifecycle Functions
 
@@ -58,21 +56,6 @@ export default class MyModule extends M {
 ##### `onDestroy()`
 
 ### Methods
-
-##### `this.addEvent( type, selector, handler, options )`
-Add delegated namespaced events that get automatically removed when the instance is destroyed.
-
-`type`: like `click`, `touchstart`, `module/action`
-
-`selector`: like `.class`, `[data-role="element"]`, `window`, `null = document`
-
-`handler`: like `this.onClick`
-
-`options`: [options](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener) passed to `addEventListener` like `{ capture: true }` 
-
-##### `this.triggerEvent( type, data, element )`
-Trigger `type` event on `element` (defaults to `document`) passing an optional `data` object.
-
 
 ##### `this.selector( role )`
 Returns an attribute selector based on the modules namespace and the passed role. 
