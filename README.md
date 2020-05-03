@@ -47,7 +47,7 @@ import MyModule from './myModule.js';
 new MyModule('( min-width: 800px )');
 ```
 
-Classes extended from M are automatically initiated and destroyed based on the provided media queries.
+Classes extended from M are automatically initiated and destroyed based on the provided media query.
 
 ### Lifecycle Functions
 
@@ -57,7 +57,7 @@ Classes extended from M are automatically initiated and destroyed based on the p
 
 `viewport`: `{ width: 0, height: 0, prevWidth: 0, prevHeight: 0 }`
 
-`isUIResize`: boolean indicating whether the resize was triggered by a visibility change of the Browser UI on mobile.
+`isUIResize`: Boolean indicating whether the resize was triggered by a visibility change of the Browser UI on mobile devices.
 
 ##### `onDestroy()`
 
@@ -65,7 +65,7 @@ Classes extended from M are automatically initiated and destroyed based on the p
 
 ##### `this.selector( role )`
 
-Returns an attribute selector based on the module's name and the passed role.
+Returns an attribute selector based on the module’s name and the provided role.
 `this.selector( 'content' )` returns `[data-MyModule-role="content"]`
 
 ##### `destroy()`
@@ -74,7 +74,7 @@ Manually destroy the instance.
 
 ### Internal properties
 
-`this._initiated`: boolean representing the module’s current init state. If `true` the `<html>` element has a class of `initiated--MyModule`.
+`this._initiated`: Boolean representing the module’s current init state. If `true` the `<html>` element has a class of `initiated--MyModule`.
 
 `this._name`: The module’s name e.g. `MyModule`.
 
