@@ -59,7 +59,7 @@ export default class M {
             return;
         }
 
-        return '[data-' + this._name + '-role="' + role + '"]';
+        return '[data-' + this._name + '-role~="' + role + '"]';
     }
 
     /**
