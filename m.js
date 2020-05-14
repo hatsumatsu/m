@@ -42,10 +42,10 @@ export default class M {
         this._mediaQuery = mediaQuery;
         this._resizeTimer = null;
         this._viewport = {
-            prevWidth: 0,
-            prevHeight: 0,
-            width: 0,
-            height: 0,
+            prevWidth: undefined,
+            prevHeight: undefined,
+            width: undefined,
+            height: undefined,
         };
 
         this._initiated = false;
@@ -100,8 +100,8 @@ export default class M {
     _onResize() {
         this._checkMediaQuery();
 
-        this._viewport.prevWidth = this._viewport.width || 0;
-        this._viewport.prevHeight = this._viewport.height || 0;
+        this._viewport.prevWidth = this._viewport.width || window.innerWidth;
+        this._viewport.prevHeight = this._viewport.height || window.innerHeight;
         this._viewport.width = window.innerWidth;
         this._viewport.height = window.innerHeight;
 
