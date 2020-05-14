@@ -105,7 +105,7 @@ export default class M {
         this._viewport.width = window.innerWidth;
         this._viewport.height = window.innerHeight;
 
-        if (this.onResize) {
+        if (this._initiated && this.onResize) {
             this.onResize(
                 this._viewport,
                 this._viewport.width < 800 &&
