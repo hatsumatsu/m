@@ -110,7 +110,7 @@ export default class M {
                 this._viewport,
                 this._viewport.width < 800 &&
                     this._viewport.width === this._viewport.prevWidth &&
-                    Math.abs(this._viewport.height - this._viewport.prevHeight) < 100
+                    Math.abs(this._viewport.height - this._viewport.prevHeight) < 120
             );
         }
     }
