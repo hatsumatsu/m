@@ -38,7 +38,7 @@ export default class MyModule extends M {
 
 export default class M {
     constructor(mediaQuery = 'screen') {
-        this._name = this.constructor.name;
+        this._name = this.constructor.name.toLowerCase();
         this._mediaQuery = mediaQuery;
         this._resizeTimer = null;
         this._viewport = {
