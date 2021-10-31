@@ -19,6 +19,9 @@ Tiny ES6 module template for progressive enhancement.
 
 `npm install @superstructure.net/m`
 
+> Note: This library comes as es6 module only.
+> If you use a transpiler like babel or swc make sure to include `/node_modules/@superstructure.net/m` in your transpiler’s config.
+
 ### Usage
 
 Create your module...
