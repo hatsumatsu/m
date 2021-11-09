@@ -50,7 +50,7 @@ import MyModule from './myModule.js';
 new MyModule('( min-width: 800px )');
 ```
 
-Classes extended from M are automatically initiated and destroyed based on the provided media query.
+Classes extended from M are automatically initiated and destroyed based on the provided media query (defaults to `screen`).
 
 ### Lifecycle Functions
 
