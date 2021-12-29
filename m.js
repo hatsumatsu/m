@@ -105,6 +105,13 @@ export default class M {
         this._viewport.width = window.innerWidth;
         this._viewport.height = window.innerHeight;
 
+        // calculate 100vh
+        const _div = document.createElement('div');
+        _div.style.height = '100vh';
+        document.body.appendChild(_div);
+        this._viewport.height100vh = _div.clientHeight;
+        document.body.removeChild(_div);
+
         if (this._initiated && this.onResize) {
             this.onResize(
                 this._viewport,

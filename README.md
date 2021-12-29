@@ -58,7 +58,7 @@ Classes extended from M are automatically initiated and destroyed based on the p
 
 ##### `onResize( viewport, isUIResize )`
 
-`viewport`: `{ width: 0, height: 0, prevWidth: 0, prevHeight: 0 }`
+`viewport`: `{ width: 0, height: 0, prevWidth: 0, prevHeight: 0, height100vh: 0 }`
 
 `isUIResize`: Boolean indicating whether the resize was triggered by a visibility change of the Browser UI on mobile devices.
 
