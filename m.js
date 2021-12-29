@@ -51,7 +51,7 @@ export default class M {
         this._initiated = false;
 
         this._bindEvents();
-        this._checkMediaQuery();
+        this._onResize(false);
     }
 
     selector(role) {
@@ -97,9 +97,7 @@ export default class M {
         }, 100);
     }
 
-    _onResize() {
-        this._checkMediaQuery();
-
+    _onResize(runHook = true) {
         this._viewport.prevWidth = this._viewport.width || window.innerWidth;
         this._viewport.prevHeight = this._viewport.height || window.innerHeight;
         this._viewport.width = window.innerWidth;
@@ -112,7 +110,9 @@ export default class M {
         this._viewport.height100vh = _div.clientHeight;
         document.body.removeChild(_div);
 
-        if (this._initiated && this.onResize) {
+        this._checkMediaQuery();
+
+        if (runHook && this._initiated && this.onResize) {
             this.onResize(
                 this._viewport,
                 this._viewport.width < 800 &&
